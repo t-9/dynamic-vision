@@ -52,12 +52,19 @@ h1 {
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.3s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  /* 通常のカードのz-index */
 }
 
 .card.target {
   background: linear-gradient(45deg, #dc3545, #ff7582);
   border: 3px solid gold;
   animation: pulse 1s infinite;
+  z-index: 10;
+  transform: scale(1.2);
+  /* 少し大きくする */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  /* 影を強くする */
 }
 
 .card.clicked {
