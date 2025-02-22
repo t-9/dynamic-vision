@@ -15,7 +15,10 @@ body {
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   text-align: center;
-  width: 500px;
+  /* 画面幅の90% */
+  width: 90vw;
+  /* PCでの最大幅 */
+  max-width: 400px;
 }
 
 h1 {
@@ -34,13 +37,15 @@ h1 {
 
 #card-container {
   position: relative;
-  width: 400px;
+  width: 100%;
   height: 400px;
   margin: 20px auto;
   border: 2px dashed #2a5298;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   overflow: hidden;
+  height: 40vh;
+  max-height: 400px;
 }
 
 .card {
@@ -147,4 +152,24 @@ h1 {
 
 .disabled {
   pointer-events: none;
+}
+
+/* スマホ用の調整 */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5em;
+    /* 見出しの文字サイズ */
+  }
+
+  #score,
+  #timer {
+    font-size: 1.2em;
+    /* スコアやタイマーの文字サイズ */
+  }
+
+  .card {
+    width: 20vw;
+    /* スマホでは少し大きめに */
+    height: 20vw;
+  }
 }
